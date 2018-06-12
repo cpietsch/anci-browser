@@ -1,0 +1,38 @@
+{
+  "name": "ANCI-browser",
+  "version": "1.0.0",
+  "description": "ANCI browser",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron --inspect=5858 .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -w"
+  },
+  "build": {
+    "appId": "ancibrowser.1",
+    "copyright": "Copyright © 2018 Christopher Pietsch",
+    "productName": "ancibrowser",
+    "mac": {
+      "category": "research.tool"
+    }
+  },
+  "repository": "",
+  "keywords": [
+    "ANCI",
+    "Miner"
+  ],
+  "author": "Christopher Pietsch",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "electron-builder": "^20.15.1"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^0.11.6",
+    "d3": "^5.4.0",
+    "request": "^2.87.0"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  }
+}

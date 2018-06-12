@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ANCI Miner</title>
+  </head>
+  <body>
+    <div class="header">
+      <span class="headline">ANCI Miner</span>
+      <span id="download" class="button">Save</span>
+      <span id="scroll" class="button">Scroll</span>
+      <input type="text" id="label" placeholder="label"></input>
+      <span id="progress">search and download</span>
+    </div>
+    <webview id="webview" preload="./script.js" src="https://images.google.com"></webview>
+
+    <script>
+      require('./renderer.js')
+    </script>
+
+    <style type="text/css">
+      html, body {
+        font-family: Helvetica;
+        padding: 0;
+        margin: 0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .header {
+        padding: 10px;
+      }
+      .headline {
+        font-weight: bold;
+        padding: 10px;
+        float: right;
+        display: inline;
+        text-align: right;
+        text-transform: lowercase;
+        margin: 0;
+        font-size: 29px;
+        line-height: 18px;
+        width: 101px;
+      }
+
+      .button {
+        border: 1px solid #000;
+        text-transform: uppercase;
+        border-radius: 7px;
+        background: #000;
+        font-weight: bold;
+        color: #FFF;
+        padding: 9px;
+        cursor: pointer;
+        float: left;
+        font-size: 18px;
+        margin-right: 10px;
+      }
+      #label {
+        border: 3px solid #000;
+        /* text-transform: uppercase; */
+        border-radius: 7px;
+        /* background: #000; */
+        font-weight: bold;
+        /* color: #FFF; */
+        padding: 7px;
+        float: left;
+        font-size: 18px;
+        margin-right: 10px;
+      }
+      #progress {
+        text-transform: uppercase;
+        border-radius: 7px;
+        background: #b9b9b9;
+        font-weight: bold;
+        color: #FFF;
+        padding: 10px;
+        float: left;
+        font-size: 18px;
+        margin-right: 10px;
+      }
+
+      webview {
+        position:absolute;
+        top:70px;
+        width: 100%;
+        height:calc(100% - 70px);
+      }
+    </style>
+  </body>
+</html>
