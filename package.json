@@ -1,12 +1,13 @@
 {
-  "name": "ANCI-browser",
-  "version": "1.0.0",
+  "name": "anci-browser",
+  "version": "2.0.0",
   "description": "ANCI browser",
   "main": "main.js",
   "scripts": {
     "start": "electron --inspect=5858 .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder -w"
+    "dist": "electron-builder -mwl",
+    "linux": "electron-builder --linux deb"
   },
   "build": {
     "appId": "ancibrowser.1",
@@ -14,6 +15,9 @@
     "productName": "ancibrowser",
     "mac": {
       "category": "research.tool"
+    },
+    "linux": {
+      "category": "Utility"
     }
   },
   "repository": "",
@@ -21,7 +25,12 @@
     "ANCI",
     "Miner"
   ],
-  "author": "Christopher Pietsch",
+  "author": {
+    "name": "Christopher Pietsch",
+    "email": "cpietsch@gmail.com",
+    "url": "https://chrispie.com"
+  },
+  "homepage": "https://chrispie.com",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^2.0.0",
