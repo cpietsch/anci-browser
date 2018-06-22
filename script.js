@@ -84,7 +84,7 @@ async function downloadContent(label = ''){
 
 	if(searchTerm !== "" && links.length){
 		ipcRenderer.sendToHost('progress', 'preparing')
-		const path = folder + '/' + label + '-' + (+new Date()) + '_' + searchTerm.replace(/ /g, '-')
+		const path = folder + '/' + label + '-' + (+new Date()) + '_' + searchTerm.replace(/ /g, '-').replace(/:/g, '-')
 		fs.mkdirSync(path);
 		const t = await downloadThumbs(links, path)
 		const i = await downloadImages(links, path)
