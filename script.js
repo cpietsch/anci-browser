@@ -172,7 +172,7 @@ function getLinks(){
 			const img = meta.ou
 			const title = meta.pt || ""
 			console.log(img, meta)
-			const id = crypto.createHash('md5').update(img || i).digest("hex")
+			const id = crypto.createHash('md5').update(img || (i+"")).digest("hex")
 
 			self.datum({
 				id,
@@ -238,6 +238,7 @@ async function downloadImages(links, path) {
 
 function saveImage(id, path, url){
 	console.log(id, url)
+	const filename = id + '-image.png'
 	return new Promise((resolve, reject) => {
 		// request.head(url, function(err, res, body){
 		// 	const type = res.headers['content-type']
@@ -245,17 +246,21 @@ function saveImage(id, path, url){
 		//     console.log('content-length:', res.headers['content-length']);
 		//     const ts = type.split('/')
 		//     const filename = id + '-image.' + ts.length ? ts[1] : 'png'
-			const filename = id + '-image.png'
-		    request({
-		        url: url,
-		        method: 'GET',
-		        headers : {
-		            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36'
-		        }
-		    })
-		    .pipe(fs.createWriteStream(path + '/' + filename))
-		    .on('close', () => resolve(filename))
-		    .on('error', (err) => reject(err))
+			try {
+				request({
+				    url: url,
+				    method: 'GET',
+				    headers : {
+				        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36'
+				    }
+				})
+				.pipe(fs.createWriteStream(path + '/' + filename))
+				.on('close', () => resolve(filename))
+				.on('error', (err) => reject(err))
+			} catch (e) {
+				reject(e)
+			}
+		    
 		// })
 	})
 	
