@@ -12,7 +12,7 @@ let gooWindow
 
 
 function createWindow () {
-  mainWindow = new BrowserWindow({width: 1150, height: 1300})
+  mainWindow = new BrowserWindow({width: 1150, height: 1300, webPreferences: { allowEval: true, nodeIntegration: true }})
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
@@ -26,7 +26,7 @@ function createWindow () {
   //   })
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   mainWindow.on('closed', function () {
     mainWindow = null

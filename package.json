@@ -32,13 +32,12 @@
   },
   "homepage": "https://chrispie.com",
   "license": "CC0-1.0",
-  "devDependencies": {
-    "electron": "^2.0.18",
-    "electron-builder": "^20.15.1"
-  },
+  "devDependencies": {},
   "dependencies": {
     "@tensorflow/tfjs": "^0.11.6",
     "d3": "^5.4.0",
+    "electron": "^6.0.10",
+    "electron-builder": "^21.2.0",
     "request": "^2.87.0"
   },
   "engines": {

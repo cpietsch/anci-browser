@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>ANCI Miner</title>
+    <!-- <meta http-equiv="Content-Security-Policy" content="worker-src https: 'unsafe-eval'"> -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'unsafe-inline' 'self';" />
   </head>
   <body>
     <div class="header">
@@ -12,7 +14,7 @@
       <input type="text" id="label" placeholder="label"></input>
       <span id="progress">search and download</span>
     </div>
-    <webview id="webview" preload="./script.js" src="https://images.google.com"></webview>
+    <webview id="webview" preload="./script.js" src="https://images.google.com" nodeintegration></webview>
 
     <script>
       require('./renderer.js')
@@ -81,6 +83,7 @@
       }
 
       webview {
+        left: 0;
         position:absolute;
         top:70px;
         width: 100%;

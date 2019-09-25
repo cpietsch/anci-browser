@@ -3,7 +3,7 @@ const dev = true;
 
 const webview = document.querySelector('webview')
 webview.addEventListener('dom-ready', () => {
-	// webview.openDevTools()
+	webview.openDevTools()
 	console.log(webview)
 })
 
