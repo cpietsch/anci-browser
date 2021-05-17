@@ -1,5 +1,8 @@
 # ANCI BROWSER
 
+![anciminer-1612x1184](https://user-images.githubusercontent.com/129529/118541285-cd53fe80-b751-11eb-923e-1f0e0d5054bc.png)
+
+
 1. bei der Google Suche ein Stichwort wie "climate research graph" eingeben
 2. (optional) auf scroll klicken, mehr Bilder werden nachgeladen (ist ein short cut fürs scrollen)
 3. (optional) mit der rechten Maustaste kannst du Bilder deselektieren
