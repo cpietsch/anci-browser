@@ -3,12 +3,12 @@
 ![anciminer-1612x1184](https://user-images.githubusercontent.com/129529/118541285-cd53fe80-b751-11eb-923e-1f0e0d5054bc.png)
 
 
-1. bei der Google Suche ein Stichwort wie "climate research graph" eingeben
-2. (optional) auf scroll klicken, mehr Bilder werden nachgeladen (ist ein short cut fürs scrollen)
-3. (optional) mit der rechten Maustaste kannst du Bilder deselektieren
-4. ein Label für die Suche vergeben
-5. auf download klicken, einen Ordner auswählen wo die Bilder gespeichert werden sollen
-6. warten..... :)
+1. enter a keyword like "climate research graph" in Google search
+2. (optional) click on scroll, more images will be loaded (is a short cut for scrolling)
+3. (optional) with the right mouse button you can deselect images
+4. assign a label for the search
+5. click on download, select a folder where the images should be saved
+6. wait..... :)
 
 ## DEV
 
